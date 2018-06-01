@@ -1,0 +1,40 @@
+[
+	{
+		    
+		    "currency": "EUR / USD",
+		    "time":"7:28 AM UTC",
+		    "value": "1.16",
+		    "percent":"−0.0030 (0.26%)"
+	},
+	{
+		    
+		    "currency": "USD / JPY",
+		    "time":"7:28 AM UTC",
+		    "value": "108.88",
+		    "percent":"−0.51 (0.47%)"
+	},
+	{
+		    
+		    "currency": "GBP / USD",
+		    "time":"7:28 AM UTC",
+		    "value": "1.33",
+		    "percent":"−0.0036 (0.27%)"
+	},
+	{
+		    
+		    "currency": "USD / CAD",
+		    "time":"7:29 AM UTC",
+		    "value": "1.30",
+		    "percent":"−0.00054 (0.042%)"
+	},
+	{
+		    
+		    "currency": "USD / HKD",
+		    "time":"7:30 AM UTC",
+		    "value": "7.85",
+		    "percent":"+0.0010 (0.013%)"
+	}
+
+	
+]
+

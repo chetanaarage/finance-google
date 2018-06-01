@@ -1,0 +1,386 @@
+
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>You may be interested in</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+ <!--  <ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>App Name</ion-title>
+    </ion-navbar>
+    <ion-toolbar>
+        <ion-row class="filters">
+            <ion-col class="col-with-arrow" (click)="slidePrev()" no-padding col-1>
+                <ion-icon *ngIf="showLeftButton" name="arrow-back"></ion-icon>
+            </ion-col>
+            <ion-col no-padding col-10>
+                <ion-slides (ionSlideDidChange)="slideChanged()" slidesPerView="3">
+                    <ion-slide *ngFor="let category of categories">
+                        <p>{{ category.name }}</p>
+                    </ion-slide>
+                </ion-slides>
+            </ion-col>
+            <ion-col class="col-with-arrow" (click)="slideNext()" no-padding col-1>
+                <ion-icon *ngIf="showRightButton" name="arrow-forward"></ion-icon>
+            </ion-col>
+        </ion-row>
+
+    </ion-toolbar>
+</ion-header> -->
+
+<ion-row class="layout">
+    	<ion-slides slidesPerView="2">
+    		
+    		<ion-slide *ngFor="let item of items">
+    		<ion-card>
+    			
+    			<!-- <ion-list>
+    			<ion-item> -->
+    				
+    			<!-- </ion-item>	
+    			 -->
+    			<!-- </ion-list>
+    			<ion-item > -->
+    				<ion-list>
+    				<!-- <ion-item> -->
+    					<!-- <p>{{item.company}}</p> -->
+    				<!-- </ion-item> -->
+    				<ion-item>
+
+    					<h3>{{item.company}}</h3>
+    					<p>{{item.title}}</p>
+    					<br/>
+    					<!-- <ion-item> -->
+    					<div>
+    						{{item.stockprice}}
+    				    <span class="price">
+							{{item.stockpercent}}
+							<ion-icon name="arrow-round-up"></ion-icon>
+						</span>
+    				</div>
+    				    <!-- </ion-item> -->
+    				    <br/>
+    				</ion-item>
+    				
+    				</ion-list>
+    				<!-- <ion-item></ion-item> -->
+    				<ion-list>
+    				
+    				<ion-card-content>
+    					<h3><a href=""><b><ion-icon name="add"></ion-icon>FOLLOW</b></a></h3>
+    				</ion-card-content>
+    			
+    			</ion-list>
+
+    			<!-- /ion-item> -->
+    		</ion-card>
+    		</ion-slide>   
+
+    	</ion-slides>
+</ion-row>
+ 
+<h2>Top Stories</h2>
+
+<ion-card>
+<ion-row>
+	<ion-slides>
+	<ion-slide>
+	<ion-card>
+	  <img src="assets/imgs/ban.png"/>
+	  <ion-card-content>
+	    <a href="">
+	      Q4 report card: Losses in banking sector tower over 
+	      4 times its profits so far; PNB and SBI hit the most
+	    </a>
+	  </ion-card-content>
+	</ion-card>
+	</ion-slide>
+	<ion-slide>
+	<ion-card>
+	  <img src="assets/imgs/cityjobs.jpeg"/>
+	  <ion-card-content>
+	    <a href="">
+	      City jobs under threat as Deutsche Bank swings axe
+	    </a>
+	  </ion-card-content>
+	</ion-card>
+	</ion-slide>
+	<ion-slide>
+	<ion-card>
+	  <img src="assets/imgs/uniform.jpg"/>
+	  <ion-card-content>
+	    <a href="">
+	      Uniform 12 pc road tax to make cars cheaper in Mumbai but dearer in Delhi
+	    </a>
+	  </ion-card-content>
+	</ion-card>
+	</ion-slide>
+	<ion-slide>
+	<ion-card>
+	  <img src="assets/imgs/paytm.jpg"/>
+	  <ion-card-content>
+	    <a href="">
+	      Paytm acquires Alibaba-backed TicketNew for around $40 million
+	    </a>
+	  </ion-card-content>
+	</ion-card>
+	</ion-slide>
+	</ion-slides>
+</ion-row>
+</ion-card>
+
+<h2>Local Market News</h2>
+<ion-card>
+<ion-row>
+	<ion-slides>
+	<ion-slide>
+	<ion-card>
+	  <img src="assets/imgs/paytm.jpg"/>
+	  <ion-card-content>
+	    <a href="">
+	      Paytm acquires Alibaba-backed TicketNew for around $40 million
+	    </a>
+	  </ion-card-content>
+	</ion-card>
+	</ion-slide>
+	<ion-slide>
+	<ion-card>
+	  <img src="assets/imgs/ban.png"/>
+	  <ion-card-content>
+	    <a href="">
+	      Q4 report card: Losses in banking sector tower over 
+	      4 times its profits so far; PNB and SBI hit the most
+	    </a>
+	  </ion-card-content>
+	</ion-card>
+	</ion-slide>
+	<ion-slide>
+	<ion-card>
+	  <img src="assets/imgs/cityjobs.jpeg"/>
+	  <ion-card-content>
+	    <a href="">
+	      City jobs under threat as Deutsche Bank swings axe
+	    </a>
+	  </ion-card-content>
+	</ion-card>
+	</ion-slide>
+	<ion-slide>
+	<ion-card>
+	  <img src="assets/imgs/uniform.jpg"/>
+	  <ion-card-content>
+	    <a href="">
+	      Uniform 12 pc road tax to make cars cheaper in Mumbai but dearer in Delhi
+	    </a>
+	  </ion-card-content>
+	</ion-card>
+	</ion-slide>
+	
+	</ion-slides>
+</ion-row>
+</ion-card>
+
+<h2>World market news</h2>
+
+<ion-card>
+<ion-row>
+	<ion-slides>
+	<ion-slide>
+	<ion-card>
+	  <img src="assets/imgs/uniform.jpg"/>
+	  <ion-card-content>
+	    <a href="">
+	      Uniform 12 pc road tax to make cars cheaper in Mumbai but dearer in Delhi
+	    </a>
+	  </ion-card-content>
+	</ion-card>
+	</ion-slide>
+	
+	<ion-slide>
+	<ion-card>
+	  <img src="assets/imgs/ban.png"/>
+	  <ion-card-content>
+	    <a href="">
+	      Q4 report card: Losses in banking sector tower over 
+	      4 times its profits so far; PNB and SBI hit the most
+	    </a>
+	  </ion-card-content>
+	</ion-card>
+	</ion-slide>
+	<ion-slide>
+	<ion-card>
+	  <img src="assets/imgs/paytm.jpg"/>
+	  <ion-card-content>
+	    <a href="">
+	      Paytm acquires Alibaba-backed TicketNew for around $40 million
+	    </a>
+	  </ion-card-content>
+	</ion-card>
+	</ion-slide>
+	<ion-slide>
+	<ion-card>
+	  <img src="assets/imgs/cityjobs.jpeg"/>
+	  <ion-card-content>
+	    <a href="">
+	      City jobs under threat as Deutsche Bank swings axe
+	    </a>
+	  </ion-card-content>
+	</ion-card>
+	</ion-slide>
+	
+	</ion-slides>
+</ion-row>
+</ion-card>
+ 
+<h2>United States markets</h2>
+
+<ion-row class="divider">
+	<ion-card>
+		<ion-list *ngFor="let item of items">
+
+			<ion-item >
+				<div>
+				<a href="">{{item.company}}</a>
+				<span class="price">{{item.stockprice}}</span>
+				</div>
+				<div>
+				<ion-note>{{item.title}}</ion-note>
+				<span class="up">
+				<ion-icon name="add"></ion-icon>
+					{{item.stockpercent}}
+				<ion-icon name="arrow-round-up"></ion-icon>
+			    </span>
+				</div>
+			</ion-item>
+
+			<!-- <ion-item>dyshujak</ion-item>
+
+			<ion-item>dyshujak</ion-item> -->
+ 		</ion-list>
+	</ion-card>
+</ion-row>
+
+<h2>World markets</h2>
+<ion-row class="divider">
+	<ion-card>
+		<ion-list *ngFor="let item of items">
+
+			<ion-item >
+				<div>
+				<a href="">{{item.company}}</a>
+				<span class="price">{{item.stockprice}}</span>
+				</div>
+				<div>
+				<ion-note>{{item.title}}</ion-note>
+				<span class="down">
+				<ion-icon name="remove"></ion-icon>
+					{{item.stockpercent}}
+				<ion-icon name="arrow-round-down"></ion-icon></span>
+				</div>
+			</ion-item>
+
+			<!-- <ion-item>dyshujak</ion-item>
+
+			<ion-item>dyshujak</ion-item> -->
+ 		</ion-list>
+	</ion-card>
+</ion-row>
+
+<h2>Currencies</h2>  
+<ion-row class="divider">
+	<ion-card>
+		<ion-list *ngFor="let item of currencies">
+
+			<ion-item >
+				<div>
+				<a href="">{{item.currency}}</a>
+				<span class="price">{{item.value}}</span>
+				</div>
+				<div>
+				<ion-note>{{item.time}}</ion-note>
+				<span class="up">{{item.percent}}
+				<ion-icon name="arrow-round-up"></ion-icon></span>
+				</div>
+			</ion-item>
+
+			<!-- <ion-item>dyshujak</ion-item>
+
+			<ion-item>dyshujak</ion-item> -->
+ 		</ion-list>
+	</ion-card>
+</ion-row>     
+   
+
+</ion-content>
+
+
+<!-- <ion-col no-padding col-3>
+ 	<h3>
+ 	<ion-list class="column">
+ 	<ion-item></ion-item>
+ 	<ion-item>Dow Jones Industrial Average</ion-item>
+ 	<ion-item>Russell 2000 Index</ion-item>
+ 	<ion-item>NYSE Composite Index</ion-item>
+ 	<ion-item>Nasdaq Composite</ion-item>
+ 	<ion-item></ion-item>
+ 	</ion-list>
+ 	</ion-col> -->
+
+
+ <!-- 	<ion-row class="world">
+	<ion-card>
+	 	<ion-avatar item-start>
+      		<img src="assets/imgs/ban.png">
+    	</ion-avatar>
+		<ion-card-content>
+		IT department releases all e-filing forms for AY 2018-19, last date for filing is July 31
+	   </ion-card-content>
+	</ion-card>
+	<ion-card>
+		 <ion-avatar item-start>
+      		<img src="assets/imgs/ban.png">
+    	</ion-avatar>
+		<ion-card-content>
+		IT department releases all e-filing forms for AY 2018-19, last date for filing is July 31
+	   </ion-card-content>
+	</ion-card>
+</ion-row> -->
+
+
+<!-- //slides with arrow -->
+
+
+<!-- <ion-row class="filters">
+	<ion-col class="col-with-arrow" (click)="slidePrev()" no-padding col-1>
+                <ion-icon *ngIf="showLeftButton" name="arrow-back"></ion-icon>
+    </ion-col>
+
+    <ion-col no-padding col-7>
+    	
+    	<ion-slides (ionSlideDidChange)="slideChanged()" slidesPerView="2">
+    		
+    		<ion-slide *ngFor="let category of categories">
+    		<ion-card>
+    			<ion-card-header>{{category.name}}</ion-card-header>
+    			
+    			 <h3><ion-icon name="add"></ion-icon>FOLLOW</h3>
+    		</ion-card>
+    		</ion-slide>   
+    	</ion-slides>
+        
+    </ion-col>
+
+    <ion-col class="col-with-arrow" (click)="slideNext()" no-padding col-1>
+                <ion-icon *ngIf="showRightButton" name="arrow-forward"></ion-icon>
+    </ion-col>
+
+
+</ion-row> -->

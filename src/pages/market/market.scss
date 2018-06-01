@@ -1,0 +1,116 @@
+page-market {
+
+ .layout{
+ 	ion-card{
+ 		height:150px;
+ 		width:180px;
+
+ 	}
+
+ 	ion-item{
+ 		div{
+ 			font-size:10pt;
+
+ 		}
+ 		.price{
+ 			float:right;
+ 			color:green;
+ 		}
+ 		
+ 		
+ 	}
+
+ 	
+ }
+
+
+ 	.provider{
+			float:right;
+		
+	}
+
+ 
+
+ .filters {
+
+        ion-col {
+            text-align: center;
+            font-size: 1.6rem;
+            line-height: 1.6rem;
+
+            ion-icon {
+                color: black;
+            }
+
+            &.col-with-arrow {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            ion-list{
+            &.column{
+            	border:1px;
+            }
+            }
+
+         }
+
+
+
+        ion-card {
+	        height: 200px;
+	    	width: 100px
+
+	    	
+        }
+
+        p {
+            color: blue;
+            margin: 0;
+            font-size: 1.6rem;
+            line-height: 1.6rem;
+        }
+
+      
+    }
+
+    .world{
+    	
+    	img {
+	    		float:right;
+	    		height:50px;
+	    		width:50px;
+    	}
+
+    
+    	 
+    	
+    	
+   }
+
+  
+   	.divider{
+
+	   	ion-item {
+	    border-bottom: 1px solid grey;
+	    border-top:1px solid grey;
+		}
+
+		.down{
+			color:red;
+			float:right;
+
+		}
+		.up{
+			color:green;
+			float:right;
+		}
+		.price{
+			float:right;
+		}
+		
+   }
+   
+
+}

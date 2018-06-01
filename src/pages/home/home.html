@@ -1,0 +1,517 @@
+
+<ion-header>
+  <ion-toolbar>
+    
+    <ion-searchbar color='primary' value="Finance" (input)="onSearchInput()"> 
+
+  </ion-searchbar>
+    <ion-buttons end>
+      <button ion-button icon-only (click)='onCancel()'>
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content padding>
+
+<ion-list>
+  <ion-slides slidesPerView="2">
+  <ion-slide>
+      <ion-item tappable (click)="marketSummary()">Market Summary</ion-item>
+  </ion-slide>
+   <ion-slide>
+      <ion-item tappable (click)="yourstocks()">Your Stocks</ion-item>
+  </ion-slide>
+
+  <ion-slide>
+      <ion-item tappable (click)="localMarkets()">Local Markets</ion-item>
+  </ion-slide>
+  <ion-slide>
+      <ion-item tappable (click)="worldMarkets()">World Marekts</ion-item>
+  </ion-slide>
+  </ion-slides>
+</ion-list>
+
+
+<!-- Market Summary Page content -->
+
+<div *ngIf="market">
+<h4>You may be interested in</h4>
+<ion-row class="layout">
+      <ion-slides slidesPerView="2">
+        
+        <ion-slide *ngFor="let item of items">
+        <ion-card>
+            <ion-list>
+            <ion-item>
+              <h3>{{item.company}}</h3>
+              <p>{{item.title}}</p>
+              <br/>
+              <div>
+                {{item.stockprice}}
+                <span class="price">
+              {{item.stockpercent}}
+              <ion-icon name="arrow-round-up"></ion-icon>
+            </span>
+            </div>
+                <br/>
+            </ion-item>
+            
+            </ion-list>
+            <ion-list>
+            <ion-card-content>
+              <h3><a href=""><b><ion-icon name="add"></ion-icon>FOLLOW</b></a></h3>
+            </ion-card-content>
+          </ion-list>
+        </ion-card>
+        </ion-slide>   
+
+      </ion-slides>
+</ion-row>
+ 
+<h2>Top Stories</h2>
+
+<ion-card>
+<ion-row>
+  <ion-slides>
+  <ion-slide>
+  <ion-card>
+    <img src="assets/imgs/ban.png"/>
+    <ion-card-content>
+      <a href="">
+        Q4 report card: Losses in banking sector tower over 
+        4 times its profits so far; PNB and SBI hit the most
+      </a>
+    </ion-card-content>
+  </ion-card>
+  </ion-slide>
+  <ion-slide>
+  <ion-card>
+    <img src="assets/imgs/cityjobs.jpeg"/>
+    <ion-card-content>
+      <a href="">
+        City jobs under threat as Deutsche Bank swings axe
+      </a>
+    </ion-card-content>
+  </ion-card>
+  </ion-slide>
+  <ion-slide>
+  <ion-card>
+    <img src="assets/imgs/uniform.jpg"/>
+    <ion-card-content>
+      <a href="">
+        Uniform 12 pc road tax to make cars cheaper in Mumbai but dearer in Delhi
+      </a>
+    </ion-card-content>
+  </ion-card>
+  </ion-slide>
+  <ion-slide>
+  <ion-card>
+    <img src="assets/imgs/paytm.jpg"/>
+    <ion-card-content>
+      <a href="">
+        Paytm acquires Alibaba-backed TicketNew for around $40 million
+      </a>
+    </ion-card-content>
+  </ion-card>
+  </ion-slide>
+  </ion-slides>
+</ion-row>
+</ion-card>
+
+<h2>Local Market News</h2>
+<ion-card>
+<ion-row>
+  <ion-slides>
+  <ion-slide>
+  <ion-card>
+    <img src="assets/imgs/paytm.jpg"/>
+    <ion-card-content>
+      <a href="">
+        Paytm acquires Alibaba-backed TicketNew for around $40 million
+      </a>
+    </ion-card-content>
+  </ion-card>
+  </ion-slide>
+  <ion-slide>
+  <ion-card>
+    <img src="assets/imgs/ban.png"/>
+    <ion-card-content>
+      <a href="">
+        Q4 report card: Losses in banking sector tower over 
+        4 times its profits so far; PNB and SBI hit the most
+      </a>
+    </ion-card-content>
+  </ion-card>
+  </ion-slide>
+  <ion-slide>
+  <ion-card>
+    <img src="assets/imgs/cityjobs.jpeg"/>
+    <ion-card-content>
+      <a href="">
+        City jobs under threat as Deutsche Bank swings axe
+      </a>
+    </ion-card-content>
+  </ion-card>
+  </ion-slide>
+  <ion-slide>
+  <ion-card>
+    <img src="assets/imgs/uniform.jpg"/>
+    <ion-card-content>
+      <a href="">
+        Uniform 12 pc road tax to make cars cheaper in Mumbai but dearer in Delhi
+      </a>
+    </ion-card-content>
+  </ion-card>
+  </ion-slide>
+  
+  </ion-slides>
+</ion-row>
+</ion-card>
+
+<h2>World market news</h2>
+
+<ion-card>
+<ion-row>
+  <ion-slides>
+  <ion-slide>
+  <ion-card>
+    <img src="assets/imgs/uniform.jpg"/>
+    <ion-card-content>
+      <a href="">
+        Uniform 12 pc road tax to make cars cheaper in Mumbai but dearer in Delhi
+      </a>
+    </ion-card-content>
+  </ion-card>
+  </ion-slide>
+  
+  <ion-slide>
+  <ion-card>
+    <img src="assets/imgs/ban.png"/>
+    <ion-card-content>
+      <a href="">
+        Q4 report card: Losses in banking sector tower over 
+        4 times its profits so far; PNB and SBI hit the most
+      </a>
+    </ion-card-content>
+  </ion-card>
+  </ion-slide>
+  <ion-slide>
+  <ion-card>
+    <img src="assets/imgs/paytm.jpg"/>
+    <ion-card-content>
+      <a href="">
+        Paytm acquires Alibaba-backed TicketNew for around $40 million
+      </a>
+    </ion-card-content>
+  </ion-card>
+  </ion-slide>
+  <ion-slide>
+  <ion-card>
+    <img src="assets/imgs/cityjobs.jpeg"/>
+    <ion-card-content>
+      <a href="">
+        City jobs under threat as Deutsche Bank swings axe
+      </a>
+    </ion-card-content>
+  </ion-card>
+  </ion-slide>
+  
+  </ion-slides>
+</ion-row>
+</ion-card>
+ 
+<h2>United States markets</h2>
+
+<ion-row class="divider">
+  <ion-card>
+    <ion-list *ngFor="let item of items">
+
+      <ion-item >
+        <div>
+        <a href="">{{item.company}}</a>
+        <span class="price">{{item.stockprice}}</span>
+        </div>
+        <div>
+        <ion-note>{{item.title}}</ion-note>
+        <span class="up">
+        <ion-icon name="add"></ion-icon>
+          {{item.stockpercent}}
+        <ion-icon name="arrow-round-up"></ion-icon>
+          </span>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-row>
+
+<h2>World markets</h2>
+<ion-row class="divider">
+  <ion-card>
+    <ion-list *ngFor="let item of items">
+
+      <ion-item >
+        <div>
+        <a href="">{{item.company}}</a>
+        <span class="price">{{item.stockprice}}</span>
+        </div>
+        <div>
+        <ion-note>{{item.title}}</ion-note>
+        <span class="down">
+        <ion-icon name="remove"></ion-icon>
+          {{item.stockpercent}}
+        <ion-icon name="arrow-round-down"></ion-icon></span>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-row>
+
+<h2>Currencies</h2>  
+<ion-row class="divider">
+  <ion-card>
+    <ion-list *ngFor="let item of currencies">
+
+      <ion-item >
+        <div>
+        <a href="">{{item.currency}}</a>
+        <span class="price">{{item.value}}</span>
+        </div>
+        <div>
+        <ion-note>{{item.time}}</ion-note>
+        <span class="up">{{item.percent}}
+        <ion-icon name="arrow-round-up"></ion-icon></span>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-row> 
+</div>    
+   
+<!-- Your Stocks Page content -->
+<div *ngIf="stocks">
+  <h4>Your stocks</h4>
+  <ion-card>
+  <ion-card-content>
+  You're not currently following any stocks. You can follow your favourite stocks for quick access and stay updated with the latest financial news.
+  </ion-card-content>
+  </ion-card>
+
+<h4>You may be interested in</h4>
+<ion-row class="layout">
+      <ion-slides slidesPerView="2">
+        
+        <ion-slide *ngFor="let item of items">
+        <ion-card>
+            <ion-list>
+            <ion-item>
+              <h3>{{item.company}}</h3>
+              <p>{{item.title}}</p>
+              <br/>
+              <div>
+                {{item.stockprice}}
+                <span class="price">
+              {{item.stockpercent}}
+              <ion-icon name="arrow-round-up"></ion-icon>
+            </span>
+            </div>
+                <br/>
+            </ion-item>
+            
+            </ion-list>
+            <ion-list>
+            <ion-card-content>
+              <h3><a href=""><b><ion-icon name="add"></ion-icon>FOLLOW</b></a></h3>
+            </ion-card-content>
+          </ion-list>
+        </ion-card>
+        </ion-slide>   
+
+      </ion-slides>
+</ion-row>
+ 
+<h2>Top Stories</h2>
+
+<ion-row class="divider">
+  <ion-card>
+    <ion-list *ngFor="let item of news">
+
+      <ion-item >
+        <div>
+        <p><a href="">{{item.header}}</a></p>
+        <span class="image"><img src={{item.img}}></span>
+        <p>15mins ago</p>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-row> 
+</div>
+
+
+<!-- Local Markets Page content -->
+
+<div *ngIf="localMarket">
+
+<ion-row class="divider">
+  <ion-card>
+    <ion-list>
+    <ion-item>
+      <div> 
+        <span class="title">.DJI </span>
+        <span class="center">24,715.09</span>
+        <span class="up">  -0.15% <ion-icon name="arrow-round-up"></ion-icon></span>
+      </div>
+    </ion-item>
+    <ion-item>
+      <div> 
+        <span class="title">.DAX </span>
+        <span class="center">13,077.72</span>
+        <span class="up">  3.25% <ion-icon name="arrow-round-up"></ion-icon></span>
+      </div>
+    </ion-item>
+    <ion-item>
+      <div> 
+        <span class="title">SENSEX</span>
+        <span class="center">34,848.30</span>
+        <span class="up">  -0.29% <ion-icon name="arrow-round-up"></ion-icon></span>
+      </div>
+    </ion-item>
+    </ion-list>
+      <ion-card-content>
+        <canvas #lineCanvaslocal></canvas>
+      </ion-card-content>
+  </ion-card>
+</ion-row>
+  
+  <h2>Local market news</h2>
+
+<ion-row class="divider">
+  <ion-card>
+    <ion-list *ngFor="let item of news">
+
+      <ion-item >
+        <div>
+        <p><a href="">{{item.header}}</a></p>
+        <span class="image"><img src={{item.img}}></span>
+        <p>15mins ago</p>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-row> 
+
+ <h2>United States markets</h2>
+
+<ion-row class="divider">
+  <ion-card>
+    <ion-list *ngFor="let item of items">
+
+      <ion-item >
+        <div>
+        <a href="">{{item.company}}</a>
+        <span class="price">{{item.stockprice}}</span>
+        </div>
+        <div>
+        <ion-note>{{item.title}}</ion-note>
+        <span class="up">
+        <ion-icon name="add"></ion-icon>
+          {{item.stockpercent}}
+        <ion-icon name="arrow-round-up"></ion-icon>
+          </span>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-row>
+
+
+</div>
+<!-- World Markets Page content -->
+<div *ngIf="worldMarket">
+
+<ion-row class="divider">
+  <ion-card>
+    <ion-list>
+    <ion-item>
+      <div> 
+        <span class="title">.DJI </span>
+        <span class="center">24,715.09</span>
+        <span class="up">  -0.15% <ion-icon name="arrow-round-up"></ion-icon></span>
+      </div>
+    </ion-item>
+    <ion-item>
+      <div> 
+        <span class="title">.DAX </span>
+        <span class="center">13,077.72</span>
+        <span class="up">  3.25% <ion-icon name="arrow-round-up"></ion-icon></span>
+      </div>
+    </ion-item>
+    <ion-item>
+      <div> 
+        <span class="title">SENSEX</span>
+        <span class="center">34,848.30</span>
+        <span class="up">  -0.29% <ion-icon name="arrow-round-up"></ion-icon></span>
+      </div>
+    </ion-item>
+    </ion-list>
+      <ion-card-content>
+        <canvas #lineCanvas></canvas>
+      </ion-card-content>
+  </ion-card>
+</ion-row>
+
+<h2>World market news</h2>
+
+<ion-row class="divider">
+  <ion-card>
+    <ion-list *ngFor="let item of news">
+
+      <ion-item >
+        <div>
+        <p><a href="">{{item.header}}</a></p>
+        <span class="image"><img src={{item.img}}></span>
+        <p>15mins ago</p>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-row> 
+
+ <h2>World markets</h2>
+
+<ion-row class="divider">
+  <ion-card>
+    <ion-list *ngFor="let item of items">
+
+      <ion-item >
+        <div>
+        <a href="">{{item.company}}</a>
+        <span class="price">{{item.stockprice}}</span>
+        </div>
+        <div>
+        <ion-note>{{item.title}}</ion-note>
+        <span class="up">
+        <ion-icon name="add"></ion-icon>
+          {{item.stockpercent}}
+        <ion-icon name="arrow-round-up"></ion-icon>
+          </span>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-row>
+</div>
+
+
+</ion-content>
+
+
+
+
+
+
+
+

@@ -1,0 +1,43 @@
+[
+	{
+		    "_id": "5adf6c25629ee80ffb918c88",
+		    "company": "NIFTY 50",
+		    "title":"NSE:NIFTY",
+		    "stockprice": "10,486.70",
+		    "stockpercent":"0.54%",
+		    "markettype":"UK"
+	},
+	{
+		    "_id": "5adf6c25629ee80ffb918c89",
+		    "company": "BSE SENSEX",
+		    "title":"INDEXBOM:SENSEX",
+		    "stockprice": "34,586.11",
+		    "stockpercent":"0.70%",
+		    "markettype":"UK&World"
+	},
+	{
+		    "_id": "5adf6c25629ee80ffb918c90",
+		    "company": "BSE Ltd",
+		    "title":"NSE:BSE",
+		    "stockprice": "807.00 INR",
+		    "stockpercent":"0.087%",
+		    "markettype":"India"
+	},
+	{
+		    "_id": "5adf6c25629ee80ffb918c91",
+		    "company": "Dow Jones Industrial Average",
+		    "title":"NDEXDJX: .DJI",
+		    "stockprice": "24,886.70",
+		    "stockpercent":"0.21%",
+		    "markettype":"World"
+	},
+	{
+		    "_id": "5adf6c25629ee80ffb918c92",
+		    "company": "S&P 500 Index",
+		    "title":"INDEXCBOE:.INX",
+		    "stockprice": "2,733.99",
+		    "stockpercent":"0.32%",
+		    "markettype":"UK"
+	}
+]
+
